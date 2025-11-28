@@ -1,5 +1,6 @@
 import tel from "../assets/telefon.png";
 import homiy from "../assets/homiy.png";
+import homiylarrr from "../assets/homiylarrr.png";
 import kodlar from "../assets/kodlar.svg";
 import telefon from "../assets/telefon.svg";
 import tel_2 from "../assets/2-telefon.png";
@@ -139,25 +140,34 @@ const Home = () => {
           src={tel}
           alt=""
         />
-      </section> 
+      </section>
 
-      <section className="bg-[#0d1b2a] text-white py-20 px-6">
+      <section className="bg-[#0d1b2a] flex gap-20 text-white py-20 px-6">
         <div className="container max-w-[1200px] m-auto flex flex-wrap-reverse sm:flex-wrap-reverse md:flex-nowrap items-center justify-between">
           <div className="sm:mt-20 w-[400px] m-auto sm:m-auto md:m-0 text-center sm:text-center md:text-start mt-10">
-            <h2 className="text-2xl sm:text-4xl font-bold ">
+            <h2 className="text-2xl sm:text-4xl font-bold">
               Who we work with
             </h2>
             <p className="max-w-xl mt-4 text-[#bfc9d8]">
               Today, millions of people around the world have successfully
-              connected their accounts to apps they love using our API. 
+              connected their accounts to apps they love using our API.
             </p>
 
             <button className="mt-10 px-6 py-3 cursor-pointer rounded-4xl sm:rounded-xl bg-transparent border border-white hover:bg-white hover:text-[#0d1b2a] duration-300">
-              <NavLink to={"/about"}>About Us</NavLink> 
+              <NavLink to={"/about"}>About Us</NavLink>
             </button>
           </div>
 
-          <img className="w-[80%] md:w-[60%] m-auto" src={homiy} alt="" />
+          <img
+            className="hidden sm:block w-[80%] md:w-[60%] m-auto"
+            src={homiy}
+            alt=""
+          />
+          <img
+            className="block sm:hidden w-[80%] md:w-[60%] m-auto"
+            src={homiylarrr}
+            alt=""
+          />
         </div>
       </section>
 
@@ -210,9 +220,15 @@ const Home = () => {
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="container max-w-[1200px] m-auto sm:flex justify-between items-center ">
           <div className="text-center w-[310px] m-auto sm:m-auto md:m-0 ">
-            <img className="m-auto w-[30%] sm:w-[40%] md:w-[100px]" src={pull} alt="" />
+            <img
+              className="m-auto w-[30%] sm:w-[40%] md:w-[100px]"
+              src={pull}
+              alt=""
+            />
             <br />
-            <span className="text-[20px] text-[#36536B]">Personal Finances</span>
+            <span className="text-[20px] text-[#36536B]">
+              Personal Finances
+            </span>
             <p className="text-[#6C8294] mt-4 text-[12px] sm:text-[12px] md:text-[16px] px-5">
               Consolidate financial data from multiple sources and categorize
               transactions up to 2 years of history. Analyze reports to
@@ -221,9 +237,15 @@ const Home = () => {
           </div>
 
           <div className="text-center w-[310px] my-8 m-auto sm:m-auto md:m-0">
-            <img className="m-auto w-[30%] sm:w-[40%] md:w-[100px]" src={trading} alt="" />
+            <img
+              className="m-auto w-[30%] sm:w-[40%] md:w-[100px]"
+              src={trading}
+              alt=""
+            />
             <br />
-            <span className="text-[20px] text-[#36536B]">Banking & Coverage</span>
+            <span className="text-[20px] text-[#36536B]">
+              Banking & Coverage
+            </span>
             <p className="text-[#6C8294] mt-4 text-[12px] sm:text-[12px] md:text-[16px] px-5">
               With our platform, you can speed up account onboarding and support
               ongoing payments for checking, savings, credit card, and brokerage
@@ -232,9 +254,15 @@ const Home = () => {
           </div>
 
           <div className="text-center w-[310px] m-auto sm:m-auto md:m-0">
-            <img className="m-auto w-[30%] sm:w-[40%] md:w-[100px]" src={card} alt="" />
+            <img
+              className="m-auto w-[30%] sm:w-[40%] md:w-[100px]"
+              src={card}
+              alt=""
+            />
             <br />
-            <span className="text-[20px] text-[#36536B]">Consumer Payments</span>
+            <span className="text-[20px] text-[#36536B]">
+              Consumer Payments
+            </span>
             <p className="text-[#6C8294] mt-4 text-[12px] sm:text-[12px] md:text-[16px] px-5">
               It’s easier to set up secure bank payments with us through a flow
               designed with the user experience in mind. Customers could
