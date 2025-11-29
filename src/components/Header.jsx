@@ -9,9 +9,9 @@ const Header = () => {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden"; 
-    } else {
-      document.body.style.overflow = "auto"; 
+      document.body.style.overflow = "hidden";
+    } else if (!isOpen) {
+      document.body.style.overflow = "auto";
     }
 
     return () => {
@@ -75,13 +75,20 @@ const Header = () => {
         </button>
       </header>
 
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-0 sm:hidden"
+        ></div>
+      )}
+
       <div
         className={`
-    fixed top-0 right-0 h-screen w-[80%] bg-[#1B262F] shadow p-5 z-10
-    flex flex-col gap-5 text-center rounded-b-xl sm:hidden
-    transform transition-transform duration-300 ease-in-out pt-20
-    ${isOpen ? "translate-x-0" : "translate-x-full"}
-  `}
+        fixed top-0 right-0 h-screen w-[80%] bg-[#1B262F] shadow p-5 z-10
+        flex flex-col gap-5 text-center sm:hidden
+        transform transition-transform duration-300 ease-in-out pt-20
+        ${isOpen ? "translate-x-0" : "translate-x-full"}
+        `}
       >
         <button
           onClick={() => setIsOpen(false)}
